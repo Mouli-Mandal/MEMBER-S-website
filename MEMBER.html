@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MEMBER Research Group</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow-y: scroll;
+      background: url('your-background-image.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .main-content {
+      background-color: rgba(255, 249, 204, 0.7); /* Yellow with 70% opacity */
+      min-height: 100vh;
+      position: relative;
+      z-index: 1;
+    }
+
+    .top-bar {
+      background-color: orange;
+      height: 70px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0px;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+
+    }
+
+    .top-bar img {
+      height: 40px;
+    }
+
+
+    .section {
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 10px 20px 20px; /* More padding on top */
+    }
+
+    .top {
+      background: transparent;
+    }
+
+    .bottom {
+      background: #e6f2ff;
+    }
+
+    h1, h2 {
+      margin: 0;
+    }
+
+    .button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      color: white;
+      transition: background-color 0.3s;
+    }
+
+    .battery { background-color: #007bff; }
+    .fuel { background-color: #28a745; }
+    .bio { background-color: #6f42c1; }
+
+    .battery:hover { background-color: #3399ff; }
+    .fuel:hover { background-color: #50c36b; }
+    .bio:hover { background-color: #8b5ed1; }
+
+    .active.battery { background-color: #0056b3; }
+    .active.fuel { background-color: #1e7e34; }
+    .active.bio { background-color: #4b2c91; }
+
+    .dropdown {
+  padding: 10px 12px;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  appearance: none;
+}
+
+
+    .content-box {
+      margin-top: 10px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2d1171;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    .footer-icons img {
+      width: 32px;
+      height: 32px;
+      margin: 0 10px;
+      vertical-align: middle;
+      object-fit: contain;
+      transition: transform 0.2s ease;
+    }
+
+    .footer-icons a:hover img {
+      transform: scale(1.15);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Orange Bar -->
+   <!-- Top Orange Bar -->
+<div class="top-bar">
+  <div style="color: white; font-weight: bold;">&nbsp;</div>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+
+  <!-- Logo inside yellow area -->
+  <div style="padding: 10px 20px;">
+    <img src="logo.png" alt="Top Logo" style="height: 60px;">
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+
+    <!-- Top Section -->
+    <div class="section top">
+      <div style="padding: 70px;margin-bottom: -20px; border-top: 5px solid black;">
+        <h1 >
+          <span style="color:red; font-weight:bold;">M</span>icrofluidics, 
+          <span style="color:red; font-weight:bold;">E</span>lectrochemistry and 
+          <span style="color:red; font-weight:bold;">M</span>aterials for 
+          <span style="color:purple; font-weight:bold;">B</span>iomedical and 
+          <span style="color:green; font-weight:bold;">E</span>nergy 
+          <span style="color:red; font-weight:bold;">R</span>esearch Applications:
+        </h1>
+        <h2 style="margin-top: 15px;">
+          Jindal’s 
+          <span style="color:red; font-weight:bold;">M</span>
+          <span style="color:purple; font-weight:bold;">E</span>
+          <span style="color:green; font-weight:bold;">M</span>
+          <span style="color:blue; font-weight:bold;">B</span>
+          <span style="color:purple; font-weight:bold;">E</span>
+          <span style="color:red; font-weight:bold;">R</span> 
+          Research Group
+        </h2>
+      </div>
+
+
+      <!-- Buttons -->
+      <div>
+        <button id="btn-battery" class="button battery" onclick="showDropdown('battery')">Battery</button>
+        <button id="btn-fuel" class="button fuel" onclick="showDropdown('fuel')">Fuel Cell</button>
+        <button id="btn-bio" class="button bio" onclick="showDropdown('bio')">Biomedical</button>
+      </div>
+
+      <!-- Dropdowns -->
+      <div class="content-box">
+        <select id="battery-dropdown" class="dropdown hidden" onchange="handleSelection('battery')">
+          <option value="">-- Select Option --</option>
+          <option value="projects">Projects</option>
+          <option value="members">Group Members</option>
+        </select>
+
+        <select id="fuel-dropdown" class="dropdown hidden" onchange="handleSelection('fuel')">
+          <option value="">-- Select Option --</option>
+          <option value="projects">Projects</option>
+          <option value="members">Group Members</option>
+        </select>
+
+        <select id="bio-dropdown" class="dropdown hidden" onchange="handleSelection('bio')">
+          <option value="">-- Select Option --</option>
+          <option value="projects">Projects</option>
+          <option value="members">Group Members</option>
+        </select>
+      </div>
+
+      <!-- Links -->
+      <div class="content-box">
+        <div id="battery-projects" class="hidden">
+          <p><strong>Battery Projects:</strong></p>
+          <ul>
+            <li><a href="ongoing-projects.html" style="color:#007bff;">Ongoing Projects</a></li>
+            <li><a href="completed-projects.html" style="color:#007bff;">Completed Projects</a></li>
+          </ul>
+        </div>
+        <div id="fuel-projects" class="hidden">
+          <p><strong>Fuel Cell Projects:</strong></p>
+          <ul>
+            <li><a href="ongoing-projects.html" style="color:#28a745;">Ongoing Projects</a></li>
+            <li><a href="completed-projects.html" style="color:#28a745;">Completed Projects</a></li>
+          </ul>
+        </div>
+        <div id="bio-projects" class="hidden">
+          <p><strong>Biomedical Projects:</strong></p>
+          <ul>
+            <li><a href="ongoing-projects.html" style="color:#6f42c1;">Ongoing Projects</a></li>
+            <li><a href="completed-projects.html" style="color:#6f42c1;">Completed Projects</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Section -->
+    <div class="section bottom">
+      <p style="font-size: 20px; color: #333;">More content can go here...</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Optional Photo -->
+    <div style="margin-bottom: 20px;">
+      <img src="iitkgp-logo.png" alt="Research Lab Group" style="max-width: 300px; height: auto; border-radius: 10px;">
+    </div>
+
+    <!-- Address & Contact Info -->
+    <div style="margin-bottom: 20px;">
+      <p>Indian Institute of Technology</p>
+      <p>Kharagpur, Kharagpur, India - 721302</p>
+      <p>Phone: <a href="tel:+913222255221" style="color: #fff; text-decoration: underline;">+91-3222-255221</a></p>
+      <p>Fax: <a href="tel:+913222255303" style="color: #fff; text-decoration: underline;">+91-3222-255303</a></p>
+    </div>
+
+    <!-- Social Media Icons -->
+     <style>
+  .footer-icons img {
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+    vertical-align: middle;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  }
+
+  .footer-icons a:hover img {
+    transform: scale(1.15);
+  }
+</style>
+    <div class="footer-icons">
+      <a href="https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqa1NfOW1UTDZoT0VNbHNJNHJJeU9QY29YNHozd3xBQ3Jtc0ttdHpqM2JvY2VQMGIzekdZZHRLTkk1RUUzMVZHQnExcFZSc29sQjZhend2YXJzaXA0eUlYbmc5Y3VIRlM5dlhfX3Q2UzBqenVNX1Uwd0ltSjh3ZnZEdWVUVUt3SjdNbHREeVJtaUgteVA3MlBIQ1RrUQ&q=https%3A%2F%2Fwww.facebook.com%2FIIT.Kgp%2F" target="_blank" title="Facebook">
+        <img src="facebook-logo.png" alt="Facebook">
+      </a>
+      <a href="https://www.youtube.com/redirect?event=channel_description&redir_token=QUFFLUhqa1otdDUtZFJYczVNUGhlRGMxeWR1dlN6OFYwQXxBQ3Jtc0tsTFZPa2ptVXgwWTRoRDQzUF84MFVrOVVlQWNOQ1NqZVVtajhwV2dNSXAxanlTUl8wbFBSeG9zQ2IyZWdxWlJRT0JhR3JJdk5kMW1jZkRVQTg0TTJLS0ZLaXFpS2ZjTWRwREVXX1hxUEtzUEplX0EwZw&q=https%3A%2F%2Ftwitter.com%2FIITKgp" target="_blank" title="Twitter">
+        <img src="twitter-logo.pngmem.webp" alt="Twitter">
+      </a>
+      <a href="https://www.linkedin.com/school/indian-institute-of-technology-kharagpur/about/?lipi=urn%3Ali%3Apage%3Aschools_school_index%3B0a2a19bb-9776-4183-a636-ff39c8063d02" target="_blank" title="LinkedIn">
+        <img src="linkedin-logo.png" alt="LinkedIn">
+      </a>
+      <a href="https://www.instagram.com/iit.kgp?utm_source=ig_web_button_share_sheet&igsh=bjZkOWxtenc3Zmt3" target="_blank" title="Instagram">
+        <img src="instagram-logo.png" alt="Instagram">
+      </a>
+      <a href="https://youtube.com/@iitkharagpuronline?si=-bIHpW-UwfWqiSQW" target="_blank" title="YouTube">
+        <img src="youtube-logo.jpg" alt="YouTube">
+      </a>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    function hideAllDropdowns() {
+      document.getElementById('battery-dropdown').classList.add('hidden');
+      document.getElementById('fuel-dropdown').classList.add('hidden');
+      document.getElementById('bio-dropdown').classList.add('hidden');
+
+      document.getElementById('battery-projects').classList.add('hidden');
+      document.getElementById('fuel-projects').classList.add('hidden');
+      document.getElementById('bio-projects').classList.add('hidden');
+
+      document.getElementById('btn-battery').classList.remove('active');
+      document.getElementById('btn-fuel').classList.remove('active');
+      document.getElementById('btn-bio').classList.remove('active');
+    }
+
+    function showDropdown(type) {
+      hideAllDropdowns();
+      document.getElementById(type + '-dropdown').classList.remove('hidden');
+      document.getElementById('btn-' + type).classList.add('active');
+    }
+
+    function handleSelection(type) {
+      document.getElementById('battery-projects').classList.add('hidden');
+      document.getElementById('fuel-projects').classList.add('hidden');
+      document.getElementById('bio-projects').classList.add('hidden');
+
+      const dropdown = document.getElementById(type + '-dropdown');
+      const value = dropdown.value;
+
+      if (value === 'projects') {
+        document.getElementById(type + '-projects').classList.remove('hidden');
+      } else if (value === 'members') {
+        window.location.href = 'group-members.html';
+      }
+    }
+  </script>
+
+</body>
+</html>
