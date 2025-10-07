@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lab Facilities</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #fdfdfd, #f5f0e6);
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #33daff,  #ff6600);
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      font-size: 26px;
+      letter-spacing: 1px;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+    .member {
+      background: #fff;
+      border-radius: 0px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 25px;
+      padding: 20px;
+      display: flex;
+      align-items: flex-start;
+      transition: transform 0.2s ease;
+    }
+    .member:hover {
+      transform: translateY(-4px);
+    }
+    .photo-section {
+      flex: 0 0 200px;
+      text-align: center;
+    }
+    .photo-section img {
+      width: 160px;
+      height: 240px;
+      border-radius: 0%;
+      object-fit: cover;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+      border: 3px solid #eee;
+    }
+    .email {
+      font-size: 14px;
+      color: #777;
+      margin-top: 8px;
+    }
+    .more-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 14px;
+      font-size: 13px;
+      color: #fff;
+      background: #2d1171;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .more-link:hover {
+      background: #4528a1;
+    }
+    .member-info {
+      flex: 1;
+      padding-left: 25px;
+    }
+    .member-info h2 {
+      margin: 0 0 10px;
+      color: #2d1171;
+      font-size: 22px;
+    }
+    .member-info p {
+      margin: 0;
+      font-size: 15px;
+      color: #444;
+    }
+    .more-details {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.4s ease;
+      text-align: left;
+      font-size: 14px;
+      margin-top: 12px;
+      background: #fafafa;
+      border-left: 3px solid #ff9933;
+      padding: 0 12px;
+      border-radius: 6px;
+    }
+    .more-details.show {
+      max-height: 300px;
+      max-width: 600px;
+      opacity: 1;
+      padding: 12px;
+    }
+
+    /* Footer */
+    footer {
+      background: #546a61;
+      color: #fff;
+      text-align: center;
+      padding: 5px 10px;
+      margin-top: 20px;
+    }
+    footer img {
+      max-width: 140px;
+      margin-bottom: 15px;
+    }
+    footer p {
+      margin: 5px 0;
+      font-size: 10px;
+    }
+    .footer-icons {
+      margin-top: 15px;
+    }
+    .footer-icons a img {
+      width: 24px;
+      height: 24px;
+      margin: 0 8px;
+      transition: transform 0.2s ease;
+    }
+    .footer-icons a:hover img {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+
+<header>Lab Facilities</header>
+<h2 class="sub-title">Lab Instruments and Details</h2>
+
+<style>
+.sub-title {
+  text-align: center;
+  color: #2d1171;
+  margin-top: 20px;
+  font-size: 30px;
+  font-weight: 500;
+}
+</style>
+
+<div class="container">
+
+  <!-- Instru 1 -->
+  <div class="member">
+    <div class="photo-section">
+      <img src="aczetinstru.jpg" alt="LabFac 1"><br>
+      <b> </b> 
+       
+    </div>
+    <div class="member-info">
+      <h2>Instrument name:</h2>
+      <p><strong>Aczet Weighing Balance CY224C</strong></p><br>
+      <p>It is an analytical balance used in laboratories for high-precision weighing (0.1 mg). Typical applications include: Preparing standards and reagents. Pharmaceutical formulation and quality control. Research experiments needing micro-level accuracy. Chemical analysis (gravimetry, titration prep). Density determination of solids/liquids. Sample preparation for chromatography, spectroscopy</p>
+    </div>
+  </div>
+
+  <!-- Member 2 -->
+  <div class="member">
+    <div class="photo-section">
+      <img src="sartorius.png" alt="LabFac 2"><br>
+      <b> </b>
+    </div>
+    <div class="member-info">
+      <h2>Instrument Name:</h2>
+      <p><strong>Sartorius Weighing balance SECURA225D-10IN</strong></p><br>
+      <p>Semi-micro balance with dual range 120 g × 0.01 mg / 220 g × 0.1 mg, isoCAL automatic calibration, touchscreen, GLP/GMP compliant, fast stabilization, ideal for pharma and research labs.</p>
+    </div>
+  </div>
+
+  <!-- Member 3 -->
+  <div class="member">
+    <div class="photo-section">
+      <img src="fumehood.jpg" alt="LabFac 3"><br>
+      <b></b>
+    </div>
+    <div class="member-info">
+      <h2>Instrument Name:</h2>
+      <p><strong>Fumehood</strong></p><br>
+      <p>A fume hood is a ventilated laboratory enclosure that protects users by drawing harmful fumes, vapors, or dust away from the workspace and safely exhausting them. It allows chemists and researchers to handle toxic, flammable, or odorous substances while minimizing exposure and contamination, making it essential for safe laboratory operations.</p>
+    </div>
+  </div>
+
+   <!-- Member 4 -->
+  <div class="member">
+    <div class="photo-section">
+      <img src="tarson.png" alt="LabFac 4"><br>
+      <b> Jai Prakash</b>
+    </div>
+    <div class="member-info">
+      <h2>Instrument Name:</h2>
+      <p><strong>Tarson, Magnetic Stirrer Hot Plate 6090</strong></p><br>
+      <p>The Tarson 6090 Magnetic Stirrer Hot Plate is a digital lab device with a 26×26 cm ceramic top, temperature 50–300 °C, stirring 100–1200 RPM, max 10 L/16 kg, used for heating and stirring solutions in chemical and biological labs.</p>
+    </div>
+  </div>
+
+    <!-- Instru 5 -->
+  <div class="member">
+    <div class="photo-section">
+      <img src="elegoo.jpg" alt="LabFac 5"><br>
+      <b> </b> 
+       
+    </div>
+    <div class="member-info">
+      <h2>Instrument name:</h2>
+      <p><strong>Elegoo, Saturn 4 Resin 3-D Printer</strong></p><br>
+      <p>The Elegoo Saturn 4 is a professional-grade resin 3D printer featuring a 10-inch 12K monochrome LCD with ultra-fine 19–24 µm XY resolution and a build volume of 218.88 × 122.88 × 220 mm. It offers automatic leveling, fast print speeds, and precise detail reproduction, making it well-suited for engineering prototypes, dental and medical models, miniatures, and other high-accuracy applications.</p>
+    </div>
+  </div>
+
+  <!-- Member 6 -->
+  <div class="member">
+    <div class="photo-section">
+      <img src="anycubic.png" alt="LabFac 1"><br>
+      <b> </b> 
+       
+    </div>
+    <div class="member-info">
+      <h2>Instrument name:</h2>
+      <p><strong>Anycubic Curing Station, Wash & Cure 3</strong></p><br>
+      <p>The Anycubic Wash & Cure 3 is a 2-in-1 post-processing station with a 4 L wash volume and 160×180 mm curing area, featuring adjustable cleaning modes, enhanced UV curing, and simple one-knob operation for efficient resin 3D print finishing.</p>
+    </div>
+  </div>
+
+  <!-- Member 7 -->
+  <div class="member">
+    <div class="photo-section">
+      <img src="electrospinner.jpg" alt="LabFac 1"><br>
+      <b> </b> 
+       
+    </div>
+    <div class="member-info">
+      <h2>Instrument name:</h2>
+      <p><strong>Electrospinner, E-Spin Nanotech, SUPER-ES-2A</strong></p><br>
+      <p>E-Spin Nanotech SUPER-ES-2A is an advanced electrospinning unit featuring dual-nozzle capability, rotating drum collectors, and a touchscreen interface. It offers precise environmental control—including humidity up to 90% RH and temperature control up to 60 °C—integrated syringe pumps for controlled infusion, high-voltage output (0–50 kV) with safety auto-shutdown, and modular collector options (plate, drum, disk) with programmable linear stages. It also includes an exhaust blower for solvent safety and UV sterilization.</p>
+    </div>
+  </div>
+
+  <!-- Member 8 -->
+  <div class="member">
+    <div class="photo-section">
+      <img src="vacuumoven.png" alt="LabFac 1"><br>
+      <b> </b> 
+       
+    </div>
+    <div class="member-info">
+      <h2>Instrument name:</h2>
+      <p><strong>Vacuum Oven</strong></p><br>
+      <p>A vacuum oven is a specialized laboratory tool that removes air to create a low-pressure environment, allowing samples to be heated or dried gently and efficiently. By reducing pressure, it lowers the boiling point of moisture or solvents—making it perfect for drying heat-sensitive materials without degradation or oxidation.</p>
+    </div>
+  </div>
+
+  <!-- Member 9 -->
+  <div class="member">
+    <div class="photo-section">
+      <img src="tubularfurncae.jpg" alt="LabFac 1"><br>
+      <b> </b> 
+       
+    </div>
+    <div class="member-info">
+      <h2>Instrument name:</h2>
+      <p><strong>Tubular furnace</strong></p><br>
+      <p>A tubular furnace is a high-temperature device with a cylindrical chamber, used for uniform heating under controlled atmosphere or vacuum in applications like annealing, sintering, and material synthesis.</p>
+    </div>
+  </div>
+
+  <!-- Member 10 -->
+  <div class="member">
+    <div class="photo-section">
+      <img src="tubularcontroller.jpg" alt="LabFac 1"><br>
+      <b> </b> 
+       
+    </div>
+    <div class="member-info">
+      <h2>Instrument name:</h2>
+      <p><strong>Tubular Controller</strong></p><br>
+      <p>A tubular furnace controller is an electronic unit that regulates the temperature, heating rate, and dwell time of a tubular furnace, ensuring precise thermal control for processes like annealing, sintering, and material testing.</p>
+    </div>
+  </div>
+
+  <!-- Member 11 -->
+  <div class="member">
+    <div class="photo-section">
+      <img src="oil.png" alt="LabFac 1"><br>
+      <b> </b> 
+       
+    </div>
+    <div class="member-info">
+      <h2>Instrument name:</h2>
+      <p><strong>Oil Bath Shaker</strong></p><br>
+      <p>An oil bath shaker is a laboratory device that combines uniform heating through an oil bath with reciprocating or orbital shaking, used for controlled incubation of samples in processes like enzyme reactions, cell cultures, and chemical synthesis.</p>
+    </div>
+  </div>
+
+  <!-- Member 12 -->
+  <div class="member">
+    <div class="photo-section">
+      <img src="digital.png" alt="LabFac 1"><br>
+      <b> </b> 
+       
+    </div>
+    <div class="member-info">
+      <h2><strong>Instrument name:</strong></h2>
+      <p><strong>Digital Spinot & Rotary Evaporator</strong></p><br>
+      <p>A digital spinot (magnetic stirrer with heating) provides precise temperature control and efficient sample stirring for uniform reactions, while a rotary evaporator enables gentle solvent removal under reduced pressure, widely used in chemical, pharmaceutical, and biological laboratories for concentration and purification of samples.</p>
+    </div>
+  </div>
+
+  <!-- Member 13 -->
+  <div class="member">
+    <div class="photo-section">
+      <img src="remi.jpg" alt="LabFac 1"><br>
+      <b> </b> 
+       
+    </div>
+    <div class="member-info">
+      <h2>Instrument name:</h2>
+      <p><strong>Remi Incubator, CIS-24 Plus</strong></p><br>
+      <p>The Remi CIS-24 Plus is an orbital shaking incubator with precise temperature control (ambient to 60 °C) and 50–200 RPM shaking, designed for cell culture, microbial growth, and hybridization.</p>
+    </div>
+  </div>
+
+  <!-- Member 14 -->
+  <div class="member">
+    <div class="photo-section">
+      <img src="bioreactor.png" alt="LabFac 1"><br>
+      <b> </b> 
+       
+    </div>
+    <div class="member-info">
+      <h2>Instrument name:</h2>
+      <p><strong>Laboratory-Scale Bioreactor</strong></p><br>
+      <p>A laboratory-scale bioreactor is a controlled vessel that supports the growth of microorganisms, cells, or tissues under regulated conditions of temperature, pH, aeration, and agitation, used for research, process optimization, and small-scale production in biotechnology and life sciences.</p>
+    </div>
+  </div>
+
+  <!-- Member 15 -->
+  <div class="member">
+    <div class="photo-section">
+      <img src="laminar.png" alt="LabFac 1"><br>
+      <b> </b> 
+       
+    </div>
+    <div class="member-info">
+      <h2>Instrument name:</h2>
+      <p><strong>Laminar, Microflow cabinet</strong></p><br>
+      <p>A laminar microflow cabinet provides a clean, particle-free airflow using HEPA/ULPA filters to protect samples and processes from contamination, widely used in microbiology, cell culture, and pharmaceutical labs.</p>
+    </div>
+  </div>
+
+  <!-- Member 16 -->
+  <div class="member">
+    <div class="photo-section">
+      <img src="remicentrifuge.jpg" alt="LabFac 1"><br>
+      <b> </b> 
+       
+    </div>
+    <div class="member-info">
+      <h2>Instrument name:</h2>
+      <p><strong>Remi Centrifuge, C-24BL</p></strong></p><br>
+      <p>The Remi C-24BL is a benchtop refrigerated centrifuge with a capacity of 4 × 100 ml, speeds up to 20,000 rpm, and precise temperature control, used for temperature-sensitive sample separation in research and clinical labs.</p>
+    </div>
+  </div>
+
+</div>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Optional Photo -->
+    <div style="text-align: center; margin-bottom: 0px; font-family: Arial, sans-serif; color: #fff;">
+  
+  <!-- Logo -->
+  <img src="memberlogo.jpg" alt="Research Lab Group" 
+       style="max-width: 50px; height: auto; border-radius: 10px; display: block; margin: 0 auto 8px auto;">
+
+  <!-- Lab & Contact Info -->
+  <div style="line-height: 1.4; display: inline-block; text-align: center;">
+    <p style="font-size: 1.2em; font-weight: bold; margin: 3px 0;">Jindal's M.E.M.B.E.R Lab</p>
+    <p style="margin: 2px 0;">Indian Institute of Technology Kharagpur</p>
+    <p style="margin: 2px 0;">Department of Chemical Engineering</p>
+    <p style="margin: 2px 0;">Room Numbers: MB-216, AB-308</p>
+    <p style="margin: 2px 0;">
+      Email: <a href="mailto:memberaj150@gmail.com" style="color: #ffffff; text-decoration: underline;">memberaj150@gmail.com</a>
+    <p style="margin: 2px 0;">
+      Phone: <a href="tel:+919643818179" style="color: #ffffff; text-decoration: underline;">+91 3222 214 594</a>
+    </p>
+  </div>
+
+</div>
+
+
+
+    <!-- Social Media Icons -->
+     <style>
+  /* .footer-icons img {
+    width: 32px;
+    height: 32px;
+    margin: 0 10px;
+    vertical-align: middle;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+  } */
+   .footer-icons img {
+  width: 20px;
+  height: 20px;
+  margin: 0 8px;
+  object-fit: contain;
+  display: inline-block;
+  border-radius: 5px; /* Optional: make edges uniform */
+  background-color: transparent; /* Optional: for icons with transparency */
+}
+.footer-icons .icon {
+  object-fit: contain;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 5px;
+  transition: transform 0.2s ease;
+}
+.small-icon {
+  width: 15px  !important;
+  height: 15px  !important;
+  margin-top:-15px !important; 
+}
+
+  .footer-icons a:hover img {
+    transform: scale(1.15);
+  }
+</style>
+    <div class="footer-icons">
+      <a href="https://www.linkedin.com/company/materials-electrochemistry-microfluidics-for-biomedical-and-energy-research-member-lab/" target="_blank" title="LinkedIn">
+        <img src="linkedin-logo.png" alt="LinkedIn">
+      </a>
+      <a href="https://www.instagram.com/m.e.m.b.e.r_iitkgp?igsh=MWxpMndnaG42MDh3Mg==" target="_blank" title="Instagram">
+        <img src="instagram-logo.png" alt="Instagram">
+      </a>
+      <a href="https://youtube.com/@m.e.m.b.e.rlabiitkharagpur?si=i8jDdyfZVWBKPE12" target="_blank" title="YouTube">
+        <img src="youtube-logo.jpg" alt="YouTube">
+      </a>
+      &nbsp;
+ <div style="text-align: right; font-size: 10px; font-style: italic;">
+  Developed by 
+  <a href="http://www.linkedin.com/in/mouli-mandal-68a720301" 
+     target="_blank" 
+     style="color: white; text-decoration: underline; font-size: 12px; font-style: italic;">
+     mouli
+  </a>
+</div>
+   </div>
+    
+  </footer> 
+
+
+</body>
+</html>
